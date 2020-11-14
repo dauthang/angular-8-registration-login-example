@@ -1,5 +1,6 @@
 ﻿import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -13,20 +14,37 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
-
+import { MatSliderModule } from '@angular/material/slider';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { MatSelectFilterModule } from 'mat-select-filter';
+import { MatSelectModule } from '@angular/material/select';
+import { HomeDemoComponent } from './homeDemo/homeDemo.component';
+import { SearchAddress } from './searchAddress/searchAddress.component';
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        appRoutingModule
+        appRoutingModule,
+        MatSliderModule,
+        MatTabsModule,
+        MultiSelectModule,
+        MatSelectFilterModule,
+        MatSelectModule,
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyA_IVKwM2t6Xx07oageEXjvuyAoDOVG9lc'
+          })
     ],
     declarations: [
         AppComponent,
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        AlertComponent
+        AlertComponent,
+        HomeDemoComponent,
+        SearchAddress
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
@@ -34,6 +52,9 @@ import { AlertComponent } from './_components';
 
         // provider used to create fake backend
         fakeBackendProvider
+    ],
+    exports: [
+        MultiSelectModule
     ],
     bootstrap: [AppComponent]
 })

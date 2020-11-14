@@ -1,0 +1,72 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1" id="orders">
+                            <option value="volvo">Volvo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1" id="orders">
+                            <option value="volvo">Volvo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-primary">Tìm kiếm</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false"
+                (mapClick)="mapClicked($event)">
+
+                <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m.label, i)"
+                    [latitude]="m.lat" [longitude]="m.lng" [label]="m.label" [markerDraggable]="m.draggable"
+                    (dragEnd)="markerDragEnd(m, $event)">
+
+                    <agm-info-window>
+                        <strong>InfoWindow content</strong>
+                    </agm-info-window>
+
+                </agm-marker>
+
+                <agm-circle [latitude]="lat + 0.3" [longitude]="lng" [radius]="5000" [fillColor]="'red'"
+                    [circleDraggable]="true" [editable]="true">
+                </agm-circle>
+
+            </agm-map> -->
+            <agm-map [latitude]="lat" [longitude]="lng" style="height: 350px;">
+                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+              </agm-map>
+        </div>
+    </div>
+</div>

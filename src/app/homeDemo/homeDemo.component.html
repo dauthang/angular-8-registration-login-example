@@ -1,0 +1,282 @@
+﻿<form id="formSave" [formGroup]="formSave" (ngSubmit)="onSubmit()" *ngIf="tabHome">
+    <div class="container">
+        <div class="row" *ngIf="!openPopupAdd">
+            <button class="form-control" type="submit" (click)="add()">Đăng bài</button>
+        </div>
+        <!-- trang chu -->
+        <div *ngIf="!openPopupAdd">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label>Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1" formControlName="orders" id="orders"
+                            [(ngModel)]='nrSelect'>
+                            <option *ngFor="let order of orders; let i = index" [value]="orders[i].id">
+                                {{orders[i].name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" id="orders0">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect2" formControlName="orders1"
+                            [(ngModel)]='nrSelect'>
+                            <option *ngFor="let order of orders1; let i = index" [value]="orders[i].id">
+                                {{orders[i].name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" id="orders1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect3" formControlName="orders2"
+                            [(ngModel)]='nrSelect'>
+                            <option *ngFor="let order of orders2; let i = index" [value]="orders[i].id">
+                                {{orders[i].name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" id="orders2">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect4" formControlName="orders2"
+                            [(ngModel)]='nrSelect'>
+                            <option *ngFor="let order of orders3; let i = index" [value]="orders[i].id">
+                                {{orders[i].name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" id="orders3">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect5" formControlName="orders2"
+                            [(ngModel)]='nrSelect'>
+                            <option *ngFor="let order of orders4; let i = index" [value]="orders[i].id">
+                                {{orders[i].name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group">
+                        <button class="form-control" type="submit" style="margin-top: 32px;">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h3>Kết quả tìm kiếm</h3>
+            </div>
+            <div class="row">
+                <div class="card w-100">
+                    <!-- <img class="card-img-left" src="public/images/giphy.gif" alt="Card image cap"> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+                <div class="card w-100">
+                    <!-- <img class="card-img-left" src="public/images/giphy.gif" alt="Card image cap"> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+                <div class="card w-100">
+                    <!-- <img class="card-img-left" src="public/images/giphy.gif" alt="Card image cap"> -->
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- dang bai -->
+        <div *ngIf="openPopupAdd">
+            <div class="row">
+                <div class="col-sm">
+                    <h1 style="text-align: center;">Đăng tin cho thuê</h1>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-header">
+                            Thông tin cơ bản
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Enter email">
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label>Example select</label>
+                                                <select class="form-control" id="exampleFormControlSelect1" id="orders">
+                                                    <option value="volvo">Volvo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label>Example select</label>
+                                                <select class="form-control" id="exampleFormControlSelect1" id="orders">
+                                                    <option value="volvo">Volvo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div class="form-group">
+                                                <label>Example select</label>
+                                                <select class="form-control" id="exampleFormControlSelect1" id="orders">
+                                                    <option value="volvo">Volvo</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-header">
+                            Tiện ích
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group row">
+                                        <label for="colFormLabelSm"
+                                            class="col-sm-3 col-form-label col-form-label-sm">Email</label>
+                                        <div class="col-sm-7">
+                                            <input type="email" class="form-control form-control-sm" id="colFormLabelSm"
+                                                placeholder="col-form-label-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group row">
+                                        <label for="colFormLabelSm"
+                                            class="col-sm-3 col-form-label col-form-label-sm">Email</label>
+                                        <div class="col-sm-7">
+                                            <input type="email" class="form-control form-control-sm" id="colFormLabelSm"
+                                                placeholder="col-form-label-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-header">
+                            Mô tả chi tiết
+                        </div>
+                        <div class="card-body">
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-header">
+                            Hình ảnh
+                        </div>
+                        <div class="card-body">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-primary">Đăng bài</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
